@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Display Movie Information</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="movies.js"></script>
+	<style>
+	div {
+    height:100%;
+}
+
+
+#left {
+	position:relative;
+    width:500px;
+    margin:25px;
+	
+	float:left;
+}
+
+#dates {
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+
+#movies{
+position: absolute;
+    top: 0px;
+    right:60
+ }
+ 
+ #right{
+    width:500px; 
+    overflow:none;
+    float:right;
+    margin:25px;
+
+ #details{
+	list-style-type:none;
+    margin:0;
+    width:150px;
+	}
+ 
+ 
+
+
+	</style>
+  </head>
+  <body bgcolor="#E6E6FA">            <!--onload="initialize();">-->
+    <form>
+       <label>Movie title: <input type="text" id="form-input"/></label>
+       <input type="button" onclick="sendRequest();" value="Display Info"/>
+    </form>
+	<div id="output"></div>
+	
+	
+	<div id="left">
+	<ul id="movies" onClick="">  <!--  onClick="olClicked()" -->
+	<p>Movie Title</p>
+	</ul>
+	<ul id="dates">
+	<p>Release Date</p>
+	</ul>
+	</div>
+	
+	
+	
+	
+	<div id="right">
+	<fieldset>
+	<legend style="width:500px,height=500px">Details of the selected movie</legend>
+	<ul id="details">
+	<img id="pic" src="" alt="Movie Poster" style="width:304px;height:228px;"></img>
+	<li id="title"></li>
+	<li id="genres"></li>
+	<li id="Summary"></li>
+	<li id="crew"></li>
+	</ul>
+	</fieldset>
+	</div>
+  </body>
+</html>
